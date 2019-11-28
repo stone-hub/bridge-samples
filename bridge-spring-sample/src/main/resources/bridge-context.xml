@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:bridge="http://xsd.u2open.com/bridge"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+		   http://xsd.u2open.com/bridge
+		   http://xsd.u2open.com/bridge/bridge.xsd">
+
+
+    <!--这里占位符的key不要修改,否则会无法读到占位符对应的配置项-->
+    <bridge:bridge-property appCode="${spring.bridge.app-code}"
+                            envEnum="${spring.bridge.env-enum}"
+                            serverUrl="${spring.bridge.server-url}"
+                            appName="${spring.bridge.app-name}"/>
+
+    <!--下面这种是不使用占位符集成-->
+<!--    <bridge:bridge-property appCode="a892-093e-c573-b11d"-->
+<!--                            envEnum="dev"-->
+<!--                            serverUrl="http://localhost:8080/bridge"-->
+<!--                            appName="test"/>-->
+
+
+</beans>
